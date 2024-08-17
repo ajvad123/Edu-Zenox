@@ -6,17 +6,22 @@ import aboutImg from '../assets/img/about-img.jpg';
 
 const About = () => {
   return (
-    <section id="about" className="about section">
+    <section id="about" className="about section ">
       {/* Section Title */}
-      <div className="container section-title text-center" data-aos="fade-up">
+      {/* About EduZenox Section */}
+      <div className="container section-title text-center zoom-in-load" data-aos="fade-up">
         <h2>About EduZenox</h2>
       </div>
       {/* End Section Title */}
 
-      <div className="container">
+      <div className="container zoom-in-load">
         <div className="row align-items-center">
           {/* About Content */}
-          <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="col-lg-7"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div className="about-content">
               <p>
                 At <strong>EduZenox</strong>, we are dedicated to transforming aspiring individuals into skilled professionals ready to excel in the dynamic world of web development. As the educational branch of Zenox, we leverage our industry expertise to deliver top-tier training programmes focused on the MERN Stack.
@@ -37,24 +42,56 @@ const About = () => {
           {/* End About Content */}
 
           {/* About Image */}
-          <div className="col-lg-5 text-center" data-aos="fade-up" data-aos-delay="200">
-            <img src={aboutImg} alt="EduZenox Learning" className="img-fluid about-img styled-img"/>
+          <div
+            className="col-lg-5 text-center"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <img
+              src={aboutImg}
+              alt="EduZenox Learning"
+              className="img-fluid about-img styled-img"
+              style={{
+                transition: "transform 0.5s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            />
           </div>
           {/* End About Image */}
         </div>
-
-        {/* Placement Support Section */}
-        <div className="row mt-5">
-          <div className="col-lg-12 text-center" data-aos="fade-up">
-            <h3>Placement Support</h3>
-            <p>
-              At EduZenox, your journey doesn't end with learning. We provide dedicated placement support to help you launch your career with confidence. Our strong industry connections ensure that you have access to job opportunities with leading companies, giving you a head start in the competitive tech world.
-            </p>
-            <a href="#courses" className="btn btn-primary mt-3"><span>Join Now</span><i className="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-        {/* End Placement Support Section */}
       </div>
+      {/* End About EduZenox Section */}
+
+      {/* Placement Support Section */}
+      <div className="row mt-5 zoom-in-load">
+        <div
+          className="col-lg-12 text-center p-5"
+          style={{
+            backgroundColor: "#fff8e1", // Light warm yellow color
+            color: "#444", // Medium gray text color
+            borderRadius: "10px",
+            border: "1px solid #ddd", // Soft border for a refined look
+          }}
+          data-aos="fade-up"
+        >
+          <h3>Placement Support</h3>
+          <p>
+            At EduZenox, your journey doesn't end with learning. We provide dedicated placement support to help you launch your career with confidence. Our strong industry connections ensure that you have access to job opportunities with leading companies, giving you a head start in the competitive tech world.
+          </p>
+          <a href="#courses" className="btn btn-primary mt-3">
+            <span>Join Now</span><i className="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {/* End Placement Support Section */}
+
+
+
+
+
+
+
     </section>
   );
 };

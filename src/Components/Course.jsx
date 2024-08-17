@@ -40,7 +40,7 @@ const Course = () => {
       if (result.status==200) {
 
         toast.success("Enrollment submitted successfully!")
-        toast.warning("Our Team Will be Contacted Soon!")
+        toast.warning("Our Team Will be Contact you  Soon!")
         setStudentInfo({ 
           name: '', 
           email: '', 
@@ -61,7 +61,7 @@ const Course = () => {
 
   return (
     <section id="courses" className="courses section">
-      <div className="container">
+      <div className="container  zoom-in-load">
         <div className="section-title text-center" data-aos="fade-up">
           <h2>Our Courses</h2>
           <p className="section-subtitle">Explore our comprehensive training programs designed to elevate your skills and career.</p>
@@ -94,7 +94,7 @@ const Course = () => {
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center' }}>
                     <i className="bi bi-calendar-check" style={{ color: 'blue', fontSize: '1.25rem', marginRight: '5px' }}></i>
-                    <h6 style={{ color: 'blue', margin: 0 }}>Start Date: <span className='text-dark'>September 15, 2024</span></h6>
+                    <h6 style={{ color: 'blue', margin: 0 }}>New Batch: <span className='text-dark'>Comming Soon..</span></h6>
                   </li>
                 </ul>
                 <button 
@@ -135,7 +135,7 @@ const Course = () => {
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center' }}>
                     <i className="bi bi-calendar-check" style={{ color: 'blue', fontSize: '1.25rem', marginRight: '5px' }}></i>
-                    <h6 style={{ color: 'blue', margin: 0 }}>Start Date: <span className='text-dark'>September 15, 2024</span></h6>
+                    <h6 style={{ color: 'blue', margin: 0 }}>New Batch: <span className='text-dark'>Comming Soon..</span></h6>
                   </li>
                 </ul>
                 <button 

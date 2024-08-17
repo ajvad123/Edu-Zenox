@@ -2184,3 +2184,70 @@ section,
   margin-right: 5px;
 }
 
+
+/* Apply Universal Transition to All Elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Zoom-In Effect for Page Load */
+.zoom-in-load {
+  transform: scale(1.1);
+  opacity: 0;
+  animation: zoomInLoad 0.8s forwards ease-in-out;
+}
+
+@keyframes zoomInLoad {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Smooth Hover Zoom Effect */
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth Opacity Transition on Hover */
+.hover-fade:hover {
+  opacity: 0.85;
+}
+
+/* Universal Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Example of Applying the Zoom-In Load Effect to Common Elements */
+.container.zoom-in-load,
+.section-title.zoom-in-load,
+.card.zoom-in-load,
+.img-fluid.zoom-in-load {
+  animation: zoomInLoad 0.8s forwards ease-in-out;
+}
+
+/* Button Zoom Effect */
+.btn-hover-zoom:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+/* Card Hover Shadow and Lift Effect */
+.card-hover-shadow:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+
+
+
+
+

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { userContact } from '../Services/allApies';
 import { toast } from 'react-toastify';
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -37,7 +38,7 @@ const Contact = () => {
 
 
 
-    }else{
+    } else {
       toast.error(result.response.data)
     }
 
@@ -49,12 +50,12 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container section-title  zoom-in-load" data-aos="fade-up">
         <h2>Contact</h2>
         <p>We’d love to hear from you! need more information?</p>
       </div>
 
-      <div className="container" data-aos="fade-up" data-aos-delay="100">
+      <div className="container  zoom-in-load" data-aos="fade-up" data-aos-delay="100">
         <div className="row gy-4">
           <div className="col-lg-5">
             <div className="info-wrap">
@@ -62,7 +63,7 @@ const Contact = () => {
                 <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Nelliparamb, Manjeri </p>
+                  <p>EduZenox,Nelliparamb, Manjeri </p>
                 </div>
               </div>
 
@@ -70,7 +71,7 @@ const Contact = () => {
                 <i className="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p>+91 8893513353</p>
                 </div>
               </div>
 
@@ -78,19 +79,20 @@ const Contact = () => {
                 <i className="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p>eduzenox@gmail.com</p>
                 </div>
               </div>
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31319.544738277895!2d76.1120541!3d11.11761635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6367a09827289%3A0xa5bab8b1f3018ca4!2sManjeri%2C%20Kerala!5e0!3m2!1sen!2sin!4v1723182183983!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.781386881779!2d76.1123245748751!3d11.129652889041406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba637910fb066f3%3A0xc8146c9427621bf4!2sZenox%20Software%20Solutions!5e0!3m2!1sen!2sin!4v1723705949539!5m2!1sen!2sin"
                 frameBorder="0"
                 style={{ border: 0, width: '100%', height: '270px' }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Map"
-              ></iframe>
+              />
+
             </div>
           </div>
 

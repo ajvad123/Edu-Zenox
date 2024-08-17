@@ -7,7 +7,7 @@ import heroImg from '../assets/img/hero-img.png';
 const Hero = () => {
   return (
     <section id="hero" className="hero section dark-background">
-      <div className="container">
+      <div className="container  zoom-in-load">
         <div className="row gy-4">
           <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
           <h1> Transforming passion into profession at EduZenox</h1>
