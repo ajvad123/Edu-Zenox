@@ -15,14 +15,19 @@ function App() {
   return (
     <>
 
-    <Header/>     
-    <Hero/>
-    <About/>
-    <Course/>
-    <Contact/>
-    <Footer/>
+      <Header />
 
-    <ToastContainer/>
+  
+      <Hero />
+      <About />
+      <Course />
+      <Contact />
+    
+
+
+      <Footer />
+
+      <ToastContainer />
     </>
   )
 }
