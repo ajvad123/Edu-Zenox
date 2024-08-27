@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
+import { Container, Navbar, Nav, Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import '../assets/css/main.css';
-
+import '../assets/css/main.css'; // Custom styles for further customization
 
 const Header = () => {
-
   const [message, setMessage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'message') {
-      setMessage(value);
-    }
+    setMessage(e.target.value);
   };
 
   const openWhatsApp = () => {
@@ -27,152 +20,85 @@ const Header = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-
-
-
   return (
-
-
-
-    <header id="header" className="header d-flex align-items-center sticky-top  ">
-      <div className="container-fluid container-xl position-relative d-flex align-items-center">
-        <a href="/" className="logo d-flex align-items-center me-auto">
-          <h2 className=""><i className="fa-solid fa-graduation-cap fa-fade" style={{ color: ' #FFD43B' }}></i>EduZenox</h2>
-        </a>
-        <nav id="navmenu" className="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#courses">Courses</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-        <button
-          onClick={toggleModal}
-          style={{
-            marginLeft: '15px',
-            padding: '10px 20px',
-            backgroundColor: '#007bff', // Blue color
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px', // Curved edges
-            cursor: 'pointer'
-          }}
-        >
-          quick
-        </button>
-
-      </div>
-
-
-      <div>
-        {isModalOpen && (
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.7)', // Darkened background for emphasis
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              zIndex: 1000, // Ensure the modal is above other elements
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: '#fff',
-                padding: '30px',
-                borderRadius: '12px', // Softer curved edges
-                maxWidth: '400px',
-                width: '100%',
-                textAlign: 'center',
-                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)', // Subtle shadow for depth
-                position: 'relative',
-              }}
+    <header className="header sticky-top">
+      <Container className="d-flex align-items-center">
+        <Navbar expand="lg" className="w-100">
+          <Navbar.Brand href="/" className="logo d-flex align-items-center">
+            <h2 className="mb-0">
+              <i className="fa-solid fa-graduation-cap fa-fade" style={{ color: '#FFD43B' }}></i> EduZenox
+            </h2>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbar-nav" />
+          <Navbar.Collapse id="navbar-nav" className="d-lg-flex">
+            <Nav className="ms-auto">
+              <Nav.Link href="#hero" className="nav-link text-white">Home</Nav.Link>
+              <Nav.Link href="#about" className="nav-link text-white">About</Nav.Link>
+              <Nav.Link href="#courses" className="nav-link text-white">Courses</Nav.Link>
+              <Nav.Link href="#contact" className="nav-link text-white">Contact</Nav.Link>
+            </Nav>
+            <Button
+              onClick={toggleModal}
+              className="btn-quick d-none d-lg-block ms-3"
             >
-              <h2
-                style={{
-                  marginBottom: '20px',
-                  color: '#007bff', // Blue color to match the button style
-                  fontSize: '24px', // Slightly larger font size for emphasis
-                  fontWeight: 'bold', // Make the text bold
-                  letterSpacing: '1px', // Add some letter spacing for a modern look
-                  textTransform: 'uppercase', // Make the text uppercase for impact
-                  borderBottom: '2px solid #007bff', // Add an underline effect
-                  paddingBottom: '10px', // Add some padding below the text
-                }}
-              >
-                Get in Touch with Us              </h2>
+              Quick
+            </Button>
+            <Button
+              onClick={toggleModal}
+              className="btn-quick d-lg-none ms-3"
+            >
+              Quick
+            </Button>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
 
-              <div style={{ marginBottom: '15px', textAlign: 'left' }}>
-                <label htmlFor="message" style={{ display: 'block', fontWeight: 'bold', marginBottom: '5px' }}>
-                  Enter your Message:
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={message}
-                  onChange={handleChange}
-                  placeholder="Enter your message"
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '8px',
-                    border: '1px solid #ccc',
-                    fontSize: '16px',
-                    outline: 'none',
-                    boxSizing: 'border-box',
-                  }}
-                />
-              </div>
-
-              <button
-                onClick={openWhatsApp}
-                style={{
-                  padding: '10px 25px',
-                  backgroundColor: '#25D366',
-                  color: '#fff',
-                  border: 'none',
-                  borderRadius: '8px',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  marginBottom: '10px',
-                  transition: 'background-color 0.3s',
-                }}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = '#1DA851')}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = '#25D366')}
-              >
-                Chat on WhatsApp
-              </button>
-
-              <button
-                onClick={toggleModal}
-                style={{
-                  padding: '10px 25px',
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  color: '#555',
-                  backgroundColor: '#f0f0f0',
-                  borderRadius: '8px',
-                  transition: 'background-color 0.3s',
-                }}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = '#e0e0e0')}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = '#f0f0f0')}
-              >
-                Close
-              </button>
-            </div>
+      <Modal show={isModalOpen} onHide={toggleModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Get in Touch with Us</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div style={{ marginBottom: '15px' }}>
+            <label htmlFor="message" style={{ display: 'block', fontWeight: 'bold', marginBottom: '5px' }}>
+              Enter your Message:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={message}
+              onChange={handleChange}
+              placeholder="Enter your message"
+              style={{
+                width: '100%',
+                padding: '10px',
+                borderRadius: '8px',
+                border: '1px solid #ccc',
+                fontSize: '16px',
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
           </div>
-        )}
-      </div>
-
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="success"
+            onClick={openWhatsApp}
+            style={{ padding: '10px 25px' }}
+          >
+            Chat on WhatsApp
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={toggleModal}
+            style={{ padding: '10px 25px' }}
+          >
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </header>
   );
-}
+};
+
 export default Header;
