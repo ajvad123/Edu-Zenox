@@ -202,6 +202,12 @@ h6 {
     order: 3;
   }
 }
+#logoIMG{
+ width: 170px; 
+ height: 90px;
+ 
+
+}
 
 /* Index Page Header
 ------------------------------*/
@@ -390,6 +396,12 @@ h6 {
     padding: 0;
     z-index: 9997;
   }
+  #logoIMG{
+    width: 100px; 
+    height: 50px;
+    
+   
+   }
 
   .navmenu ul {
     display: none;

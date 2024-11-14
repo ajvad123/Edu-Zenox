@@ -9,14 +9,14 @@ const Footer = () => (
       <div className="row gy-4">
         <div className="col-lg-4 col-md-6 footer-about">
           <a href="/" className="d-flex align-items-center">
-            <h2 className=""><i className="fa-solid fa-graduation-cap fa-fade" style={{ color: ' #FFD43B' }}></i>EduZenox</h2>
+            <h2 className=""><i className="fa-solid fa-graduation-cap fa-fade" style={{ color: ' #FFD43B' }}></i>EDUNOX</h2>
           </a>
           <div className="footer-contact pt-3">
             <p>Nelliparamb,</p>
             <p>Manjeri</p>
 
             <p className="mt-3"><strong>Phone:</strong> <span>+91 8893513353</span></p>
-            <p><strong>Email:</strong> <span>eduzenox@gmail.com</span></p>
+            <p><strong>Email:</strong> <span>edunox@gmail.com</span></p>
           </div>
         </div>
         <div className="col-lg-2 col-md-3 footer-links">
@@ -59,7 +59,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong className="px-1 sitename">EduZenox</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong className="px-1 sitename">EDUNOX</strong> <span>All Rights Reserved</span></p>
 
     </div>
   </footer>

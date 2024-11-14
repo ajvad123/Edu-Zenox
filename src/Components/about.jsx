@@ -10,7 +10,7 @@ const About = () => {
       {/* Section Title */}
       {/* About EduZenox Section */}
       <div className="container section-title text-center zoom-in-load" data-aos="fade-up">
-        <h2>About EduZenox</h2>
+        <h2>About EDUNOX</h2>
       </div>
       {/* End Section Title */}
 
@@ -24,7 +24,7 @@ const About = () => {
           >
             <div className="about-content">
               <p>
-                At <strong>EduZenox</strong>, we are dedicated to transforming aspiring individuals into skilled professionals ready to excel in the dynamic world of web development. As the educational branch of Zenox, we leverage our industry expertise to deliver top-tier training programmes focused on the MERN Stack.
+                At <strong>EDUNOX</strong>, we are dedicated to transforming aspiring individuals into skilled professionals ready to excel in the dynamic world of web development. As the educational branch of Zenox, we leverage our industry expertise to deliver top-tier training programmes focused on the MERN Stack.
               </p>
               <p>
                 Our mission goes beyond just teaching; we aim to build a community of innovators who are equipped to tackle real-world challenges. With our hands-on approach, you'll gain the confidence to build, deploy, and scale web applications that stand out in the industry.
@@ -77,7 +77,7 @@ const About = () => {
         >
           <h3>Placement Support</h3>
           <p>
-            At EduZenox, your journey doesn't end with learning. We provide dedicated placement support to help you launch your career with confidence. Our strong industry connections ensure that you have access to job opportunities with leading companies, giving you a head start in the competitive tech world.
+            At EDUNOX, your journey doesn't end with learning. We provide dedicated placement support to help you launch your career with confidence. Our strong industry connections ensure that you have access to job opportunities with leading companies, giving you a head start in the competitive tech world.
           </p>
           <a href="#courses" className="btn btn-primary mt-3">
             <span>Join Now</span><i className="bi bi-arrow-right"></i>

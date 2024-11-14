@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="container  zoom-in-load">
         <div className="row gy-4">
           <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-          <h1> Transforming passion into profession at EduZenox</h1>
+          <h1> Transforming passion into profession at EDUNOX</h1>
           <p>Your Gateway to Mastering the MERN Stack and Beyond</p>
           <div className="d-flex">
               <a href="#courses" className="btn-get-started">View Courses</a>

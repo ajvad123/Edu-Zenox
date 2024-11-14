@@ -63,7 +63,7 @@ const Contact = () => {
                 <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>EduZenox,Nelliparamb, Manjeri </p>
+                  <p>EDUNOX,Nelliparamb, Manjeri </p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ const Contact = () => {
                 <i className="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>eduzenox@gmail.com</p>
+                  <p>edunox@gmail.com</p>
                 </div>
               </div>
 

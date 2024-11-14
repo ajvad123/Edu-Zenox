@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Navbar, Nav, Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/main.css'; // Custom styles for further customization
+import heroImg from '../assets/img/edunox.png';
 
 const Header = () => {
   const [message, setMessage] = useState('');
@@ -24,10 +25,9 @@ const Header = () => {
     <header className="header sticky-top">
       <Container className="d-flex align-items-center">
         <Navbar expand="lg" className="w-100">
-          <Navbar.Brand href="/" className="logo d-flex align-items-center">
-            <h2 className="mb-0">
-              <i className="fa-solid fa-graduation-cap fa-fade" style={{ color: '#FFD43B' }}></i> EduZenox
-            </h2>
+          <Navbar.Brand href="/" className=" ">
+            <img src={heroImg} id='logoIMG' className="" alt="Hero" />
+
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav" className="d-lg-flex">
